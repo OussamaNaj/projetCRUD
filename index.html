@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <form action="ajout.php"  id="ajoutform" method="post">
+        <label>CIN</label>
+        <input type="number" name="cin" id="cin" placeholder="CIN">
+        <br>
+        <span id="errorcin"></span>
+        <br>
+        <label>Nom</label>
+        <input type="text" name="nom" id="nom" placeholder="NOM">
+        <br>
+        <span id="errornom"></span>
+        <br>
+        <label>Prenom</label>
+        <input type="text" name="prenom" id="prenom" placeholder="PRENOM">
+        <br>
+        <span id="errorprenom"></span>
+        <br>
+        <label>Email</label>
+        <input type="text" name="email" id="email" placeholder="EMAIL">
+        <br>
+        <span id="erroremail"></span>
+        <br>
+        <label>Date de Naissance</label>
+        <input type="date" name="date_naissance" id="date_naissance" placeholder="DATE DE NAISSANE">
+        <br>
+        <span id="errornaissance"></span>
+        <br>
+        <label>Salaire</label>
+        <input type="text" name="salaire" id="salaire" placeholder="SALAIRE">
+        <br>
+        <span id="errorsalaire"></span>
+        <br>
+        <label>Departement</label>
+        <input type="text" name="departement" id="departement" placeholder="DEPARTEMENT">
+        <br>
+        <span id="errordepartement"></span>
+        <br>
+        <button type="submit" name="save">Save</button>
+    </form>
+    <button><a href="consulter.php">Consulter</a></button>
+</body>
+<script src="controls.js"></script>
+</html>
