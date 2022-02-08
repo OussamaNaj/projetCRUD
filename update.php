@@ -10,6 +10,6 @@ if (isset($_POST['update'])) {
     $date_naissance = $_POST['date_naissance'];
     $salaire = $_POST['salaire'];
     $departement = $_POST['departement'];
-    $mysqli->query("UPDATE employe SET nom=NULLIF('$nom',''), prenom=NULLIF('$prenom',''), email=NULLIF('$email',''), date_naissance=NULLIF('$date_naissance',''), salaire=NULLIF('$salaire',''), departement='$departement' where cin =$cin");
+    $mysqli->query("UPDATE employe SET nom=NULLIF('$nom',''), prenom=NULLIF('$prenom',''), email=NULLIF('$email',''), date_naissance=NULLIF('$date_naissance',''), salaire=NULLIF('$salaire',''), departement='$departement' where cin ='$cin'");
 }
 header("Location: consulter.php");

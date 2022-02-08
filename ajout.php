@@ -8,6 +8,6 @@ if(isset($_POST['save'])) {
     $date_naissance = $_POST['date_naissance'];
     $salaire = $_POST['salaire'];
     $departement = $_POST['departement'];
-    $mysqli->query("INSERT INTO employe (cin,nom,prenom,email,date_naissance,salaire,departement) VALUES ($cin,NULLIF('$nom',''),NULLIF('$prenom',''),NULLIF('$email',''),NULLIF('$date_naissance',''),NULLIF('$salaire',''),'$departement')");
+    $mysqli->query("INSERT INTO employe (cin,nom,prenom,email,date_naissance,salaire,departement) VALUES ('$cin',NULLIF('$nom',''),NULLIF('$prenom',''),NULLIF('$email',''),NULLIF('$date_naissance',''),NULLIF('$salaire',''),'$departement')");
     header("Location: consulter.php");
 }

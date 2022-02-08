@@ -10,9 +10,9 @@
 <?php
 $mysqli= new mysqli('localhost','oussama','oussama','projetCRUD');
 $cin=$_GET['edit'];
+$result=$mysqli->query("select * from employe where cin='$cin'");
 
-$result=$mysqli->query("select * from employe where cin=$cin");
-if(count($result)==1){
+if($result->num_rows==1){
     $row=$result->fetch_array();
     $nom=$row['nom'];
     $prenom=$row['prenom'];
@@ -25,7 +25,7 @@ if(count($result)==1){
 
 <form action="update.php" method="post">
     <label>CIN</label>
-    <input type="number" name="cin" readonly="readonly" placeholder="<?php echo $cin;?>" value="<?php echo $cin;?>">
+    <input type="text" name="cin" readonly="readonly" placeholder="<?php echo $cin;?>" value="<?php echo $cin;?>">
     <br>
     <br>
     <label>Nom</label>
